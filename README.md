@@ -1,4 +1,5 @@
-# 2D Code Reader -- One App to Scan Them All
+# 2D Code Reader
+## One App to Scan Them All
 
 ## Tests
 
