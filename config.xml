@@ -1,21 +1,18 @@
-<!-- https://build.phonegap.com/docs/config-xml -->
-
 <?xml version="1.0" encoding="UTF-8"?>
-<widget
-    xmlns     = "http://www.w3.org/ns/widgets"
-    xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.trejder.phonegap.2dcodereader"
-    version   = "2.0.0">
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.trejder.phonegap.2dcodereader"
+        version   = "2.0.0">
     
     <name>2D Code Reader</name>
 
     <description>
-        Scans all most popular 2D codes.
+        The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. One app to scan them all.
     </description>
 
-	<author href="https://github.com/trejder">
-		https://github.com/trejder/
-	</author>
+    <author href="https://github.com/trejder">
+        https://github.com/trejder/
+    </author>
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 

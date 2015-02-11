@@ -3,9 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         
         <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" href="fake-bootstrap.min.css" >
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="barcodescanner.js"></script>
@@ -21,18 +21,24 @@
         <div class="app">
         
             <h1>2D Code Reader</h1>
-            <h2>One App to Scan Them All</h2>
-            
-            <div id="deviceready" class="blink">
-                <p class="event listening">Loading...</p>
-                <p class="event received">Scanner is ready</p>
+            <h2>(one app to scan them all)</h2>
+
+            <p class="buttons"><a id="scan" class="btn btn-giant btn-success">Scan 2D Code</a></p>
+
+            <div id="info" style="display: none">
+                
+                <div id="label" class="info label">Format:</div>
+
+                <div id="data" class="info data">none</div>
+
+                <div style="clear: both; height: 0px">&nbsp;</div>
+
+                <p id="result">&nbsp;</p>
+
             </div>
-            
-            <p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
-            
-            <p><a href="#" class="topcoat-button" id="encode">ENCODE</a></p>
-            
-            <p id="info"></p>
+
+            <p class="buttons"><a id="encode" class="btn btn-info">Encode QR Code</a></p>
+
             
         </div>
 
