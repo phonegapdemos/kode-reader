@@ -41,7 +41,7 @@ body
     }
 }
 
-h1 {
+h1, h2 {
     font-size:24px;
     font-weight:normal;
     margin:0px;
@@ -49,6 +49,8 @@ h1 {
     padding:0px;
     text-align:center;
 }
+
+h2 {font-size: 18px}
 
 .event {
     border-radius:4px;
