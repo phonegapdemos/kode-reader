@@ -1,6 +1,8 @@
 # 2D Code Reader
 
-The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. **One app to scan them all**.
+The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes.
+
+**One app to scan them all**.
 
 ## Tests
 
