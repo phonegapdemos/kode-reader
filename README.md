@@ -1,8 +1,6 @@
 # 2D Code Reader
 
-The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes.
-
-**One app to scan them all**.
+**One app to scan them all** -- The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. See below list for details.
 
 ## Supported 2D codes
 
@@ -18,7 +16,11 @@ Yes, [_Aztec Code_](http://en.wikipedia.org/wiki/Aztec_Code), though quite popul
 
 ## Tests
 
-Tested on four different devices and Android versions:
+There's as `tests` folder included in this repository, where you find PDF files containing examples of many codes supported by this scanner, along with necessary comments. Use them to test your application. Note, that not all of them are readable on-screen and some must be printed to be readable.
+
+Note for the developers: The `tests` folder is huge and it adds > 5 MB to your application size, when building through PhoneGap Build with directly specifying GitHub repository. To avoid this, either build locally or zip contents of this repository excluding `tests` folder and build through PhoneGap Build, by uploading private application code from `.zip` file.
+
+This application was tested on four different devices and Android versions:
 
 - Samsung Galaxy Nexus with Android 4.3 (previously Android 4.2.2),
 - LG GT540 with Android 2.3.3 and CyanogenMod, 
