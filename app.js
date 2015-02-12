@@ -32,8 +32,8 @@ var app =
             {
                 app.toggleInfoBox();
 
-                document.getElementById('result').innerHTML = result.text;
-                document.getElementById('data').innerHTML = result.format;
+                document.getElementById('data-result').innerHTML = result.text;
+                document.getElementById('data-format').innerHTML = result.format;
             }
             else app.toggleInfoBox(true);
 

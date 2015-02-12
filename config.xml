@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.trejder.phonegap.2dcodereader"
+        id        = "com.phonegap.ryanw.barcodedemo"
         version   = "2.0.0">
     
     <name>2D Code Reader</name>
@@ -14,7 +14,8 @@
         https://github.com/trejder/
     </author>
 
-    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
+    <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
 
     <feature name="http://api.phonegap.com/1.0/device" />
 

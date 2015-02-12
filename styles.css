@@ -12,7 +12,7 @@ body
     font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 }
 
-.app
+div.app
 {
     margin-top: 21px;
     text-align: center;
@@ -39,21 +39,23 @@ h2
 
 p.buttons a {width: 73%;}
 
-div.info
+div#info
 {
-    width: 49%;
+    width: 85%;
+    margin: auto
 }
 
 div.label
 {
     color: gray;
     float: left;
-    text-align: right;
+    width: 60px;
+    text-align: left;
 }
 
-div.data
+div.result
 {
-    float: right;
+    float: left;
     text-align: left;
     font-weight: bold;
 }
