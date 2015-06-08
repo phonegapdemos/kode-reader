@@ -37,6 +37,8 @@ var app =
 
                 document.getElementById('data-result').innerHTML = result.text;
                 document.getElementById('data-format').innerHTML = result.format;
+
+                // alert(app.validateURL(result));
             }
             else app.toggleInfoBox(true);
 
@@ -74,5 +76,22 @@ var app =
         });
         
         return false;
+    },
+
+    /**
+     * Used regular expression from http://stackoverflow.com/a/17726973/1469208
+     *
+     * Alternatives to be eventually considered:
+     *
+     * http://stackoverflow.com/a/9284473/1469208
+     * http://stackoverflow.com/a/17714711/1469208
+     * http://stackoverflow.com/a/2015516/1469208
+     * http://stackoverflow.com/a/14582229/1469208
+     */
+    validateURL: function(url)
+    {
+        var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+
+        return urlRegex.test(url);
     }
 };
