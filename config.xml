@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.trejder.barcodereader"
-        version   = "2.0.0">
+        id        = "pl.gaman.kodereader"
+        version   = "2.1.0">
     
-    <name>2D Code Reader</name>
+    <name>Kode Reader</name>
 
     <description>
         The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. One app to scan them all.
@@ -19,7 +19,7 @@
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
-    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />

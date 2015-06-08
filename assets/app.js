@@ -9,6 +9,8 @@ var app =
     {
         document.getElementById('scan').addEventListener('click', app.scan, false);
         document.getElementById('encode').addEventListener('click', app.encode, false);
+
+        app.scan();
     },
 
     toggleInfoBox: function(hide)
@@ -22,6 +24,7 @@ var app =
 
     scan: function()
     {
+        navigator.vibrate(500);
         app.toggleInfoBox(true);
 
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
@@ -57,7 +60,9 @@ var app =
 
         scanner.encode(scanner.Encode.TEXT_TYPE, result, function(success)
         {
-            //do nothing
+            /**
+             * Do nothing...
+             */
         }, function(fail)
         {
             alert("Encoding failed! Reason: " + fail);
