@@ -58,6 +58,11 @@ var app =
             result = window.prompt('Encode what?'),
             scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
+        /**
+         * Cancel encoding if user hit 'Cancel' button or entered an empty string.
+         */
+        if (result === null || typeof result === 'object' || result === '') return false;
+
         scanner.encode(scanner.Encode.TEXT_TYPE, result, function(success)
         {
             /**
