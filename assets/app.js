@@ -24,7 +24,7 @@ var app =
 
     scan: function()
     {
-        navigator.vibrate(500);
+        navigator.vibrate(300);
         app.toggleInfoBox(true);
 
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
