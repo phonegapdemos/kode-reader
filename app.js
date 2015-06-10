@@ -68,8 +68,11 @@ var app =
         /**
          * https://build.phonegap.com/plugins/67
          * https://github.com/VersoSolutions/CordovaClipboard/
+         *
+         * "Simplified" version of call as per http://stackoverflow.com/q/30758290/1469208
          */
-        window.plugins.copy(text, function(){alert('Copied to clipboard!')}, function(){alert('Error copying code to clipboard! Sorry...')});
+        window.plugins.copy(text);
+        // window.plugins.copy(text, function(){alert('Copied to clipboard!')}, function(){alert('Error copying code to clipboard! Sorry...')});
     },
 
     openInBrowser: function()
