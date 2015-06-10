@@ -16,6 +16,7 @@
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
     <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 
     <feature name="http://api.phonegap.com/1.0/device" />
 

@@ -1,5 +1,7 @@
 var app = 
 {
+    resultText: '',
+
     initialize: function()
     {
         document.addEventListener('deviceready', app.onDeviceReady, false);
@@ -13,7 +15,7 @@ var app =
         document.getElementById('clipboard').addEventListener('click', app.copyToClipboard, false);
 
         app.toggleInfoBox(true);
-        app.toggleResultButtons('[none]');
+        app.toggleResultButtons('https://build.phonegap.com/apps/1309487/builds');
         document.getElementById('data-format').innerHTML = '[none]';
 
         app.scan();
@@ -21,7 +23,11 @@ var app =
 
     toggleResultButtons: function(result)
     {
-        document.getElementById('data-result').innerHTML = result;
+        app.resultText = result;
+
+        var resultString = (result.length > 33) ? result.substring(0, 32) + '...' : result;
+
+        document.getElementById('data-result').innerHTML = resultString;
 
         if (app.validateURL(result))
         {
@@ -54,7 +60,7 @@ var app =
     copyToClipboard: function()
     {
         var
-            code = document.getElementById('data-result').innerHTML,
+            code = app.resultText,
             disabled = document.getElementById('clipboard').hasAttribute('disabled');
 
         if (code === '[none]' || code === '' || disabled) return false;
@@ -65,12 +71,18 @@ var app =
     openInBrowser: function()
     {
         var
-            code = document.getElementById('data-result').innerHTML,
+            url = app.resultText,
             disabled = document.getElementById('browser').hasAttribute('disabled');
 
-        if (code === '[none]' || code === '' || disabled) return false;
+        if (url === '[none]' || url === '' || disabled) return false;
 
-        alert('pening "' + code + '" in browser!');
+        /**
+         * https://build.phonegap.com/plugins/233
+         * http://stackoverflow.com/a/17887465/1469208
+         * http://stackoverflow.com/a/20060846/1469208
+         * http://docs.phonegap.com/en/edge/cordova_inappbrowser_inappbrowser.md.html
+         */
+        window.open(url, '_system');
     },
 
     scan: function()
