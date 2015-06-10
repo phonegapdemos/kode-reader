@@ -12,7 +12,34 @@ var app =
         document.getElementById('browser').addEventListener('click', app.openInBrowser, false);
         document.getElementById('clipboard').addEventListener('click', app.copyToClipboard, false);
 
+        app.toggleInfoBox(true);
+        app.toggleResultButtons('[none]');
+        document.getElementById('data-format').innerHTML = '[none]';
+
         app.scan();
+    },
+
+    toggleResultButtons: function(result)
+    {
+        document.getElementById('data-result').innerHTML = result;
+
+        if (app.validateURL(result))
+        {
+            document.getElementById('browser').removeAttribute('disabled');
+        }
+        else
+        {
+            document.getElementById('browser').setAttribute('disabled', 'diabled');
+        }
+
+        if ((result !== '[none]' && result !== ''))
+        {
+            document.getElementById('clipboard').removeAttribute('disabled');
+        }
+        else
+        {
+            document.getElementById('clipboard').setAttribute('disabled', 'diabled');
+        }
     },
 
     toggleInfoBox: function(hide)
@@ -26,26 +53,29 @@ var app =
 
     copyToClipboard: function()
     {
-        var code = document.getElementById('data-result').innerHTML;
+        var
+            code = document.getElementById('data-result').innerHTML,
+            disabled = document.getElementById('clipboard').hasAttribute('disabled');
 
-        if (code === '[none]' || code === '') return false;
+        if (code === '[none]' || code === '' || disabled) return false;
 
         alert('copying "' + code + '" to clipboard!');
     },
 
     openInBrowser: function()
     {
-        var code = document.getElementById('data-result').innerHTML;
+        var
+            code = document.getElementById('data-result').innerHTML,
+            disabled = document.getElementById('browser').hasAttribute('disabled');
 
-        if (code === '[none]' || code === '') return false;
+        if (code === '[none]' || code === '' || disabled) return false;
 
         alert('pening "' + code + '" in browser!');
     },
 
     scan: function()
     {
-        navigator.vibrate(300);
-        app.toggleInfoBox(true);
+        navigator.vibrate(100);
 
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
@@ -53,16 +83,9 @@ var app =
         {
             if(!result.cancelled)
             {
-                document.getElementById('data-result').innerHTML = result.text;
                 document.getElementById('data-format').innerHTML = result.format;
 
-                var
-                    browserButton = app.validateURL(result.text) ? false : 'disabled';
-                    clipboardButton = (result.text !== '[none]' && result.text !== '') ? false : 'disabled';
-                    
-                document.getElementById('browser').attr('disabled', browserButton);
-                document.getElementById('clipboard').attr('disabled', clipboardButton);
-
+                app.toggleResultButtons(result.text);
                 app.toggleInfoBox();
             }
             else app.toggleInfoBox(true);
