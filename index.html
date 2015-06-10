@@ -4,13 +4,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         
-        <link rel="stylesheet" type="text/css" href="assets/styles.css" />
-        <link rel="stylesheet" href="assets/fake-bootstrap.min.css" >
+        <link rel="stylesheet" href="assets/styles.css" type="text/css" />
+        <link rel="stylesheet" href="assets/fake-bootstrap.min.css" type="text/css" />
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="barcodescanner.js"></script>
-        
-        <script type="text/javascript" src="assets/app.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+
         <script type="text/javascript">
             app.initialize();
         </script>
@@ -26,8 +26,8 @@
 
             <p class="buttons"><a id="scan" class="btn btn-insane btn-success">Scan the Kode</a></p>
 
-            <div id="info" style="display: none;">
-                
+            <div id="info">
+
                 <div id="label-format" class="label">Format:</div>
 
                 <div id="data-format" class="result">[none]</div>
@@ -37,6 +37,13 @@
                 <div id="label-result" class="label">Result:</div>
 
                 <div id="data-result" class="result">[none]</div>
+
+                <div style="clear: both; height: 10px">&nbsp;</div>
+
+                <div>
+                    <a id="clipboard" class="btn btn-inverse btn-small send-to">Copy to clipboard</a>
+                    <a id="browser" class="btn btn-inverse btn-small send-to">Open in browser</a>
+                </div>
 
                 <div style="clear: both; height: 0px">&nbsp;</div>
 

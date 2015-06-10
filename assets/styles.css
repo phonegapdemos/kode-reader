@@ -42,7 +42,8 @@ p.buttons a {width: 73%;}
 div#info
 {
     width: 85%;
-    margin: auto
+    margin: auto;
+    display: none;
 }
 
 div.label
