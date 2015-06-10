@@ -1,6 +1,10 @@
 # 2D Code Reader
 
-**One app to scan them all** -- The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. See below list for details.
+_One app to scan them all_ -- The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. See below list for details.
+
+**Note, that this project is generally abandoned / closed, as I treat it purely as test-drive. This is my first mobile application with ads and deployed to app stores. Sure thing, that if you find some really nasty thing, you can report it here and I'll consider fixing it. But, I have a very limited time resources for projects like that. Sorry! Therefore, in most cases, you have to fix something yourself. A pull request would be very nice, however! :>**
+
+This project is initially based on [wildabeast/BarcodeDemo](https://github.com/wildabeast/BarcodeDemo) repository, a demo for [BarcodeScanner plugin](https://github.com/wildabeast/BarcodeScanner), however very highly modified with a lot of changes since inital fork.
 
 ## Supported 2D codes
 
@@ -28,5 +32,3 @@ This application was tested on four different devices and Android versions:
 - Sony Xperia E with Android 4.1.1.
 
 All seems to be fine. I haven't got any chance testing it on either iOS or Windows Mobile so far. Sorry. Tested **only** as compiled through [PhoneGap Build](http://build.phonegap.com). Never compiled locally or tested after such build.
-
-Initially based on [wildabeast/BarcodeDemo](https://github.com/wildabeast/BarcodeDemo) repository, a demo for [BarcodeScanner plugin](https://github.com/wildabeast/BarcodeScanner) for PhoneGap Build. With a lot of changes since then.

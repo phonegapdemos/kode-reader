@@ -15,7 +15,7 @@ var app =
         document.getElementById('clipboard').addEventListener('click', app.copyToClipboard, false);
 
         app.toggleInfoBox(true);
-        app.toggleResultButtons('https://build.phonegap.com/apps/1309487/builds');
+        app.toggleResultButtons('[none]');
         document.getElementById('data-format').innerHTML = '[none]';
 
         app.scan();
@@ -60,12 +60,16 @@ var app =
     copyToClipboard: function()
     {
         var
-            code = app.resultText,
+            text = app.resultText,
             disabled = document.getElementById('clipboard').hasAttribute('disabled');
 
-        if (code === '[none]' || code === '' || disabled) return false;
+        if (text === '[none]' || text === '' || disabled) return false;
 
-        alert('copying "' + code + '" to clipboard!');
+        /**
+         * https://build.phonegap.com/plugins/67
+         * https://github.com/VersoSolutions/CordovaClipboard/
+         */
+        window.plugins.copy(text, function(){alert('Copied to clipboard!')}, function(){alert('Error copying code to clipboard! Sorry...')});
     },
 
     openInBrowser: function()
