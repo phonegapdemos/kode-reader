@@ -18,7 +18,7 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
     <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
     <gap:plugin name="com.verso.cordova.clipboard" version="0.1.0" />
-    <gap:plugin name="cordova-plugin-admobpro" source="npm"/>
+    <gap:plugin name="com.google.cordova.admob" version= "2.7.7" source="plugins.cordova.io" />
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
