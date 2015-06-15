@@ -1,10 +1,45 @@
 var app = 
 {
     resultText: '',
+    adMobId: {},
 
     initialize: function()
     {
         document.addEventListener('deviceready', app.onDeviceReady, false);
+
+        /**
+         * Get proper AdMob ad unit's IDs.
+         *
+         * https://github.com/floatinghotpot/cordova-admob-pro/wiki/00.-How-To-Use-with-PhoneGap-Build
+         */
+        
+        /**
+         * Windows 8 / Windows Phone 8
+         */
+        app.adMobId = {
+            banner: 'ca-app-pub-2443694251751888/6171320055',
+            interstitial: 'ca-app-pub-2443694251751888/9124786451'
+        };
+
+        /**
+         * Android
+         */
+        if(/(android)/i.test(navigator.userAgent)) { 
+            app.adMobId = {
+                banner: 'ca-app-pub-2443694251751888/3915857654',
+                interstitial: 'ca-app-pub-2443694251751888/9403988055'
+            };
+        }
+
+        /**
+         * iOS
+         */
+        if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+            app.adMobId = {
+                banner: 'ca-app-pub-2443694251751888/6310920852',
+                interstitial: 'ca-app-pub-2443694251751888/9264387253'
+            };
+        }
     },
 
     onDeviceReady: function()
@@ -17,6 +52,7 @@ var app =
         app.toggleResultButtons('[none]');
         document.getElementById('data-format').innerHTML = '[none]';
 
+        app.initAdMob();
         app.scan();
     },
 
@@ -142,5 +178,19 @@ var app =
         var urlRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
 
         return urlRegex.test(url);
+    },
+
+    initAdMob: function()
+    {
+        /**
+         * https://github.com/floatinghotpot/cordova-admob-pro/wiki/00.-How-To-Use-with-PhoneGap-Build
+         */
+        if (AdMob) {
+            AdMob.createBanner({
+                adId : app.adMobId.banner,
+                position : AdMob.AD_POSITION.BOTTOM_CENTER,
+                autoShow : true
+            });
+        }
     }
 };
