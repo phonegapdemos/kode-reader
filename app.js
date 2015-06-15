@@ -14,7 +14,6 @@ var app =
         document.getElementById('browser').addEventListener('click', app.openInBrowser, false);
         document.getElementById('clipboard').addEventListener('click', app.copyToClipboard, false);
 
-        app.toggleInfoBox(true);
         app.toggleResultButtons('[none]');
         document.getElementById('data-format').innerHTML = '[none]';
 
@@ -46,15 +45,6 @@ var app =
         {
             document.getElementById('clipboard').setAttribute('disabled', 'diabled');
         }
-    },
-
-    toggleInfoBox: function(hide)
-    {
-        var
-            hide = hide || false,
-            hideString = (hide) ? 'none' : 'block';
-
-        document.getElementById('info').style.display = hideString;
     },
 
     copyToClipboard: function()
@@ -105,24 +95,15 @@ var app =
                 document.getElementById('data-format').innerHTML = result.format;
 
                 app.toggleResultButtons(result.text);
-                app.toggleInfoBox();
             }
-            else app.toggleInfoBox(true);
 
-        }, function (error)
-        {
-            app.toggleInfoBox(true);
-
-            alert("Scanning failed! Reason: ", error); 
-        });
+        }, function (error){alert("Scanning failed! Reason: ", error);});
         
         return false;
     },
 
     encode: function()
     {
-        app.toggleInfoBox(true);
-
         var
             result = window.prompt('Encode what?'),
             scanner = cordova.require("cordova/plugin/BarcodeScanner");
