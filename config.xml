@@ -3,6 +3,12 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "pl.gaman.kodereader"
         version   = "2.1.0">
+        
+    <!-- http://stackoverflow.com/a/30968157/1469208 -->
+    <!-- http://developer.android.com/guide/topics/manifest/uses-sdk-element.html -->
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
     
     <name>Kode Reader</name>
 
@@ -12,9 +18,6 @@
         https://github.com/trejder/
     </author>
     
-    <!-- http://stackoverflow.com/a/30968157/1469208 -->
-    <uses-sdk android:minSdkVersion="14" />
-
     <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
     <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
