@@ -6,13 +6,14 @@
     
     <name>Kode Reader</name>
 
-    <description>
-        The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. One app to scan them all.
-    </description>
+    <description>The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. One app to scan them all.</description>
 
     <author href="https://github.com/trejder">
         https://github.com/trejder/
     </author>
+    
+    <!-- http://stackoverflow.com/a/30968157/1469208 -->
+    <uses-sdk android:minSdkVersion="14" />
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
