@@ -36,7 +36,7 @@
             <Language code="en-GB"/>
             <Language code="pl-PL"/>
         </Languages>
-        <DefaultLanguage xmlns="" code="en-EN" />
+        <DefaultLanguage xmlns="" code="en-GB" />
     </gap:config-file>
 
 </widget>
