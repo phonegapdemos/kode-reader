@@ -33,7 +33,7 @@
     
     <gap:config-file platform="winphone" parent="/Deployment" mode="replace">
         <Languages xmlns="">
-            <Language code="en-EN"/>
+            <Language code="en-GB"/>
             <Language code="pl-PL"/>
         </Languages>
         <DefaultLanguage xmlns="" code="en-EN" />
