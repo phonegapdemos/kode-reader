@@ -44,6 +44,8 @@ var app =
 
     onDeviceReady: function()
     {
+        document.addEventListener('menubutton', app.menuButtonHandler, false);
+        
         document.getElementById('scan').addEventListener('click', app.scan, false);
         document.getElementById('encode').addEventListener('click', app.encode, false);
         document.getElementById('browser').addEventListener('click', app.openInBrowser, false);
@@ -54,6 +56,18 @@ var app =
 
         app.initAdMob();
         app.scan();
+    },
+    
+    menuButtonHandler: function()
+    {
+        /**
+         * Do nothing, when user presses system menu button. Used to handle small
+         * group of devices, that crashes Kode Reader app under Android 4.x or newer
+         * when user presses system menu button.
+         *
+         * See: http://stackoverflow.com/a/30968157/1469208 for details.
+         */
+        //Do nothing...
     },
 
     toggleResultButtons: function(result)
