@@ -4,12 +4,6 @@
         id        = "pl.gaman.kodereader"
         version   = "2.1.0">
         
-    <!-- http://stackoverflow.com/a/30968157/1469208 -->
-    <!-- http://developer.android.com/guide/topics/manifest/uses-sdk-element.html -->
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
-    
     <name>Kode Reader</name>
 
     <description>The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. One app to scan them all.</description>
@@ -31,6 +25,12 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
     <preference name="webviewbounce"    value="false" />
+    
+    <!-- Disable menu for Android 4.x and disable installation on Android 3.x -->
+    <!-- and lower at all. See: http://stackoverflow.com/a/30968157/1469208 -->
+    
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-targetSdkVersion" value="21" />
 
     <icon src="assets/icon.png" />
 </widget>
