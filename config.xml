@@ -27,4 +27,16 @@
     <preference name="webviewbounce"    value="false" />
     
     <icon src="assets/icon.png" />
+    
+    <!-- Support app description in more languages than just default English. -->
+    <!-- See: http://stackoverflow.com/a/30981149/1469208 for more details. -->
+    
+    <gap:config-file platform="winphone" parent="/Deployment" mode="replace">
+        <Languages xmlns="">
+            <Language code="en-EN"/>
+            <Language code="pl-PL"/>
+        </Languages>
+        <DefaultLanguage xmlns="" code="en-EN" />
+    </gap:config-file>
+
 </widget>
