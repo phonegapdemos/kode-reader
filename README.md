@@ -2,9 +2,11 @@
 
 _One app to scan them all_ -- The simplest line and matrix codes reader out there. Scans all major and most popular 2D codes. See below list for details.
 
-**This project ABANDONED, because it was meant to be test project only! There is no wiki, issues and no support. There will be no future updates. Unfortunately, you're on your own.**
-
 This project is initially based on [wildabeast/BarcodeDemo](https://github.com/wildabeast/BarcodeDemo) repository, a demo for [BarcodeScanner plugin](https://github.com/wildabeast/BarcodeScanner), however very highly modified with a lot of changes since inital fork.
+
+For PhoneGap developers Kode Reader may be an interesting example for mobile application monetization, by integrating AdMob an network and displaying their apps. It was achieved using powerful [`floatinghotpot/cordova-admob-pro`](https://github.com/floatinghotpot/cordova-admob-pro) plugin, the only available plugin that lets you serve ads in application build with PhoneGap Build (all other ads SDKs requires you to build application locally).
+
+**This project ABANDONED, because it was meant to be test project only! There is no wiki, issues and no support. There will be no future updates. Unfortunately, you're on your own.**
 
 ## Supported 2D codes
 
