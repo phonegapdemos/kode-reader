@@ -43,6 +43,12 @@ This application was tested on four different devices and Android versions:
 - GSmart Rola G1317D with Android 2.2.2,
 - Sony Xperia E with Android 4.1.1.
 
-All seems to be fine. I haven't got any chance testing it on either iOS or Windows Mobile so far. Sorry. Tested **only** as compiled through [PhoneGap Build](http://build.phonegap.com). Never compiled locally or tested after such build.
+All seems to be fine under Android. **Under Windows Phone 8 this application seems to be NOT working at all**. I runs without any problems or errors, but camera is not zooming automatically and I wasn't able to scan ANY code.  Sorry.
+
+Tested **only** as compiled through [PhoneGap Build](http://build.phonegap.com). Never compiled locally or tested after such build.
+
+You can download compiled versions of this application for different platforms from [`_publish`](https://github.com/phonegapdemos/kode-reader/tree/master/_publish) folder or directly from PhoneGap Build public pages for these applications ([here](https://build.phonegap.com/apps/1579359/share)). Note, that they're signed with my own private signing keys and certificates.
+
+Note also, that since these applications are copied directly to SD card (instead of being downloaded from proper mobile stores) you should undertake additional steps (like enabling installation from untrusted sources in Android) to be able to install them on your mobile device.
 
 **This project ABANDONED, because it was meant to be test project only! There is no wiki, issues and no support. There will be no future updates. Unfortunately, you're on your own.**
