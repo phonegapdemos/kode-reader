@@ -6,6 +6,16 @@ This project is initially based on [wildabeast/BarcodeDemo](https://github.com/w
 
 For PhoneGap developers Kode Reader may be an interesting example for mobile application monetization, by integrating AdMob an network and displaying their apps. It was achieved using powerful [`floatinghotpot/cordova-admob-pro`](https://github.com/floatinghotpot/cordova-admob-pro) plugin, the only available plugin that lets you serve ads in application build with PhoneGap Build (all other ads SDKs requires you to build application locally).
 
+Some screensshots of compiled application, running under Android platform:
+
+| scanning... | scanned QR Code | scanned UPC-E |
+| :----:| :----:| :----:|
+|![android-s03.png][androids03]|![android-s02.png][androids02]|![android-s01.png][androids01]|
+
+[androids03]: https://raw.githubusercontent.com/phonegapdemos/kode-reader/master/_publish/android-s03.png "android-s03.png"
+[androids02]: https://raw.githubusercontent.com/phonegapdemos/kode-reader/master/_publish/android-s02.png "android-s02.png"
+[androids01]: https://raw.githubusercontent.com/phonegapdemos/kode-reader/master/_publish/android-s01.png "android-s01.png"
+
 **This project ABANDONED, because it was meant to be test project only! There is no wiki, issues and no support. There will be no future updates. Unfortunately, you're on your own.**
 
 ## Supported 2D codes
